@@ -13,6 +13,7 @@ public class TheJourneyBeginsTest {
     public void setUp() {
         theJourneyBegins = new TheJourneyBegins();
     }
+
     @Test
     public void addTest1() {
         assertEquals(3, theJourneyBegins.add(1, 2));
@@ -49,9 +50,7 @@ public class TheJourneyBeginsTest {
     }
 
     @Test
-    public void centuryFromYearTest6() {
-        assertEquals(2, theJourneyBegins.centuryFromYear(200));
-    }
+    public void centuryFromYearTest6() { assertEquals(2, theJourneyBegins.centuryFromYear(200)); }
 
     @Test
     public void centuryFromYearTest7() {
@@ -68,4 +67,53 @@ public class TheJourneyBeginsTest {
         assertEquals(1, theJourneyBegins.centuryFromYear(8));
     }
 
+    @Test
+    public void checkPalindromeTest1() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("aabaa"));
+    }
+
+    @Test
+    public void checkPalindromeTest2() {
+        assertEquals(false, theJourneyBegins.checkPalindrome("abac"));
+    }
+
+    @Test
+    public void checkPalindromeTest3() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("a"));
+    }
+
+    @Test
+    public void checkPalindromeTest4() {
+        assertEquals(false, theJourneyBegins.checkPalindrome("az"));
+    }
+
+    @Test
+    public void checkPalindromeTest5() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("abacaba"));
+    }
+
+    @Test
+    public void checkPalindromeTest6() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("z"));
+    }
+
+    @Test
+    public void checkPalindromeTest7() {
+        assertEquals(false, theJourneyBegins.checkPalindrome("aaabaaaa"));
+    }
+
+    @Test
+    public void checkPalindromeTest8() {
+        assertEquals(false, theJourneyBegins.checkPalindrome("zzzazzazz"));
+    }
+
+    @Test
+    public void checkPalindromeTest9() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("hlbeeykoqqqqokyeeblh"));
+    }
+
+    @Test
+    public void checkPalindromeTest10() {
+        assertEquals(true, theJourneyBegins.checkPalindrome("hlbeeykoqqqokyeeblh"));
+    }
 }

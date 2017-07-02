@@ -16,4 +16,20 @@ public class TheJourneyBegins {
         }
         return r;
     }
+
+    boolean checkPalindrome(String inputString) {
+
+        int length = inputString.length();
+
+        for (int i = 0; i < length; i++) {
+
+            char a = inputString.charAt(i);
+            char b = inputString.charAt(length - i - 1);
+
+            if (a != b) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
